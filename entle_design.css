@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     text-align: center;
-    background-image: url(/360_F_764518624_7sQQPoc7LBy7ydrwf1SgTXi8Ia5SsSP5.jpg);
+    background-image: url(360_F_764518624_7sQQPoc7LBy7ydrwf1SgTXi8Ia5SsSP5.jpg);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -122,4 +122,5 @@ dialog:not([open]) {
     50% {
         transform: translateY(-40px);
     }
+
 }
