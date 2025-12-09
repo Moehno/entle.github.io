@@ -7,7 +7,7 @@ const today = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
 let randomWord = "";
 
 //fetch a random word from database by using "today" as a seed
-fetch("/entle_db.json")
+fetch("entle_db.json")
     .then(response => response.json())
     .then(database => {
         const databaseSize = database.length;
@@ -197,3 +197,4 @@ function playDuckAudio() {
     audio = document.getElementById("duckAudio");
     audio.play();
 }
+
