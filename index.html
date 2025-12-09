@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/entle_design.css">
+    <script src="/entle_code.js" defer></script>
+    <title>Tägliches Entle</title>
+</head>
+
+<body>
+    <div class="gameWrapper">
+        <div class="gameContent">
+            <h1>Entle</h1>
+
+            <div id="playerGuesses">
+                <!-- Boxes will be placed here by Script -->
+            </div>
+
+            <div id="buttons" hidden>
+                <button class="playerButton" onclick="compareToSolution()">Bestätigen</button>
+                <button class="playerButton" onclick="deleteLastLetter()">Löschen</button>
+                <button class="playerButton" onclick="deleteAllLettersInRow()">Alles Löschen</button>
+            </div>
+
+            <div id="keyboard">
+                <div class="keyboardRow">
+                    <button class="keyboardLetter" id="Q" onclick="enterLetter(this)">Q</button>
+                    <button class="keyboardLetter" id="W" onclick="enterLetter(this)">W</button>
+                    <button class="keyboardLetter" id="E" onclick="enterLetter(this)">E</button>
+                    <button class="keyboardLetter" id="R" onclick="enterLetter(this)">R</button>
+                    <button class="keyboardLetter" id="T" onclick="enterLetter(this)">T</button>
+                    <button class="keyboardLetter" id="Z" onclick="enterLetter(this)">Z</button>
+                    <button class="keyboardLetter" id="U" onclick="enterLetter(this)">U</button>
+                    <button class="keyboardLetter" id="I" onclick="enterLetter(this)">I</button>
+                    <button class="keyboardLetter" id="O" onclick="enterLetter(this)">O</button>
+                    <button class="keyboardLetter" id="P" onclick="enterLetter(this)">P</button>
+                </div>
+                <div class="keyboardRow">
+                    <button class="keyboardLetter" id="A" onclick="enterLetter(this)">A</button>
+                    <button class="keyboardLetter" id="S" onclick="enterLetter(this)">S</button>
+                    <button class="keyboardLetter" id="D" onclick="enterLetter(this)">D</button>
+                    <button class="keyboardLetter" id="F" onclick="enterLetter(this)">F</button>
+                    <button class="keyboardLetter" id="G" onclick="enterLetter(this)">G</button>
+                    <button class="keyboardLetter" id="H" onclick="enterLetter(this)">H</button>
+                    <button class="keyboardLetter" id="J" onclick="enterLetter(this)">J</button>
+                    <button class="keyboardLetter" id="K" onclick="enterLetter(this)">K</button>
+                    <button class="keyboardLetter" id="L" onclick="enterLetter(this)">L</button>
+                    <button class="keyboardLetter" id="Ü" onclick="enterLetter(this)">Ü</button>
+                </div>
+                <div class="keyboardRow">
+                    <button class="keyboardLetter" id="Y" onclick="enterLetter(this)">Y</button>
+                    <button class="keyboardLetter" id="X" onclick="enterLetter(this)">X</button>
+                    <button class="keyboardLetter" id="C" onclick="enterLetter(this)">C</button>
+                    <button class="keyboardLetter" id="V" onclick="enterLetter(this)">V</button>
+                    <button class="keyboardLetter" id="B" onclick="enterLetter(this)">B</button>
+                    <button class="keyboardLetter" id="N" onclick="enterLetter(this)">N</button>
+                    <button class="keyboardLetter" id="M" onclick="enterLetter(this)">M</button>
+                    <button class="keyboardLetter" id="Ö" onclick="enterLetter(this)">Ö</button>
+                    <button class="keyboardLetter" id="Ä" onclick="enterLetter(this)">Ä</button>
+                    <button class="keyboardLetter" id="🦆" onclick="playDuckAudio()">🦆</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <dialog class="gameOver" id="gameOver" closedby="any">
+        <h2 id="gameOverTitle">Gewonnen/ Verloren</h2>
+        <p id="gameOverText">Versuchs morgen nochmal!</p>
+        <form method="dialog">
+            <button class="dialogButton">Schließen</button>
+        </form>
+    </dialog>
+
+    <audio src="/duck_audio.mp3" id="duckAudio"></audio>
+
+</body>
+
+</html>

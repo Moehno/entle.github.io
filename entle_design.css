@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    background-image: url(/360_F_764518624_7sQQPoc7LBy7ydrwf1SgTXi8Ia5SsSP5.jpg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 15px;
+}
+
+.gameWrapper {
+    background-color: #F8F8EE;
+    border: 4px solid #916533;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 90dvw;
+}
+
+.gameContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.letterbox {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.row, .keyboardRow, #buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.keyboardLetter {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 45px;
+    height: 60px;
+    margin: 5px;
+}
+
+.playerButton {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 140px;
+    height: 50px;
+    margin: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.correctLetter {
+    background-color: green;
+}
+
+.semicorrectLetter {
+    background-color: yellow;
+}
+
+.incorrectLetter {
+    background-color: gray;
+    color: white;
+}
+
+.checkedLetter {
+    animation: flip 0.75s;
+}
+
+.winnerLetter {
+    animation: jump 0.6s;
+}
+
+.gameOver {
+    background-color: #F8F8EE;
+    border: 4px solid #916533;
+    border-radius: 20px;
+    max-width: 350px;
+    inset: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gameOver::backdrop {
+    background: #00000077;
+    backdrop-filter: blur(5px);
+}
+
+dialog:not([open]) {
+    display: none;
+}
+
+@keyframes flip {
+    0% {
+        background-color: #F8F8EE;
+    }
+    50% {
+        background-color: #F8F8EE;
+        transform: rotateY(0.25turn);
+    }
+}
+
+@keyframes jump {
+    50% {
+        transform: translateY(-40px);
+    }
+}
