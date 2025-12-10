@@ -14,7 +14,7 @@ fetch("entle_db.json")
         const todaysWord = today % databaseSize;
         randomWord = database[todaysWord].toUpperCase();
         createBoxes();
-    })
+    });
 
 //function that creates boxes based on word length and maxguesses
 function createBoxes() {
@@ -197,4 +197,5 @@ function playDuckAudio() {
     audio = document.getElementById("duckAudio");
     audio.play();
 }
+
 
