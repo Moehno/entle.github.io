@@ -65,17 +65,17 @@ h1 {
     vertical-align: middle;
 }
 
-.correctLetter {
-    background-color: green;
+.incorrectLetter {
+    background-color: gray;
+    color: white;
 }
 
 .semicorrectLetter {
     background-color: yellow;
 }
 
-.incorrectLetter {
-    background-color: gray;
-    color: white;
+.correctLetter {
+    background-color: green;
 }
 
 .checkedLetter {
@@ -124,3 +124,4 @@ dialog:not([open]) {
     }
 
 }
+
